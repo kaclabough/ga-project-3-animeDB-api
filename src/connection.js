@@ -17,5 +17,4 @@ mongoose
 
 mongoose.Promise = Promise;
 
-//so I can push to heroku
 module.exports = mongoose;
