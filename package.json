@@ -1,0 +1,28 @@
+{
+  "name": "ga-project-3-animedb-api",
+  "version": "1.0.0",
+  "description": "Anime Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirAirdude/ga-project-3-animeDB-api.git"
+  },
+  "keywords": [
+    "Anime",
+    "Database"
+  ],
+  "author": "Kyle Clabough & Keene Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirAirdude/ga-project-3-animeDB-api/issues"
+  },
+  "homepage": "https://github.com/SirAirdude/ga-project-3-animeDB-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9",
+    "mongooses": "^1.0.0"
+  }
+}
