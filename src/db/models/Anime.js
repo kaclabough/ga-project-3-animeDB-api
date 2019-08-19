@@ -39,3 +39,5 @@ const Anime = new Schema({
   },
   episodeCount: Number
 });
+
+module.exports = mongoose.model("Anime", Anime);
