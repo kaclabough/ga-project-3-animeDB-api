@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/SirAirdude/ga-project-3-animeDB-api#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.6.9",
     "mongooses": "^1.0.0"
