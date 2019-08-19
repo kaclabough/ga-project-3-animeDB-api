@@ -13,7 +13,7 @@ mongoose
   .then(instance =>
     console.log(`connected to db: ${instance.connections[0].name}`)
   )
-  .catch(error => console.log("connection failed!", error));
+  .catch(error => console.log("connection failed!\n", error));
 
 mongoose.Promise = Promise;
 
