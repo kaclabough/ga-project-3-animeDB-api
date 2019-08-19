@@ -121,7 +121,7 @@
     "synopsis": "The seemingly ordinary and unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, he trained relentlessly for three years—and lost all of his hair in the process. Now, Saitama is incredibly powerful, so much so that no enemy is able to defeat him in battle. In fact, all it takes to defeat evildoers with just one punch has led to an unexpected problem—he is no longer able to enjoy the thrill of battling and has become quite bored.\r\n\r\nThis all changes with the arrival of Genos, a 19-year-old cyborg, who wishes to be Saitama's disciple after seeing what he is capable of. Genos proposes that the two join the Hero Association in order to become certified heroes that will be recognized for their positive contributions to society, and Saitama, shocked that no one knows who he is, quickly agrees. And thus begins the story of One Punch Man, an action-comedy that follows an eccentric individual who longs to fight strong enemies that can hopefully give him the excitement he once felt and just maybe, he'll become popular in the process.\r\n\r\n(Source: MAL Rewrite)",
     "titles": {
       "en_jp": "One Punch Man",
-      "en_us": "One Punch Man",
+      "en": "One Punch Man",
       "ja_jp": "ワンパンマン"
     },
     "rating": "85.05",
@@ -1107,7 +1107,7 @@
     "type": "anime",
     "synopsis": "Third and final season focuses on Aang's quest to defeat the tyrannical Fire Lord. In the season's beginning, Aang and his friends Sokka, Katara, and Toph are traveling through the Fire Nation, conjuring a plan for invading the Fire Nation and looking for a teacher to teach Aang Firebending. Time is against our heroes as Sozin's Comet fast approaches...",
     "titles": {
-      "en_us": "Avatar: The Last Airbender Book 3: Fire"
+      "en": "Avatar: The Last Airbender Book 3: Fire"
     },
     "rating": "83.34",
     "status": "finished",
@@ -1184,7 +1184,7 @@
     "type": "anime",
     "synopsis": "Aang and his friends Katara and Sokka are on a quest to find an Earthbending teacher. After finding important information concerning the war with the Fire Nation, their journey leads to Ba Sing Se, the capital of the Earth Kingdom, where they uncover great internal government corruption.",
     "titles": {
-      "en_us": "Avatar: The Last Airbender Book 2: Earth"
+      "en": "Avatar: The Last Airbender Book 2: Earth"
     },
     "rating": "83.33",
     "status": "finished",
@@ -1340,6 +1340,7 @@
     "type": "anime",
     "synopsis": "Six thousand years before Sora and Shiro were even a blink in the history of Disboard, war consumed the land, tearing apart the heavens, destroying stars, and even threatening to wipe out the human race. Amid the chaos and destruction, a young man named Riku leads humanity toward the tomorrow his heart believed in. One day, in the ruins of an Elf city, he meets Shuvi, a female exiled \"Ex-machina\" android who asks him to teach her what it means to have a human heart.\r\n\r\n(Source: Sentai Filmworks)",
     "titles": {
+      "en": "No Game, No Life: Zero",
       "en_jp": "No Game No Life: Zero",
       "ja_jp": "ノーゲーム・ノーライフ ゼロ"
     },
@@ -1456,7 +1457,7 @@
     "type": "anime",
     "synopsis": "Teen Miles Morales becomes Spider-Man of his reality, crossing his path with five counterparts from other dimensions to stop a threat for all realities.\r\n\r\n(Source: IMDB)",
     "titles": {
-      "en_us": "Spider-Man: Into The Spider-Verse"
+      "en": "Spider-Man: Into The Spider-Verse"
     },
     "rating": "83.32",
     "status": "finished",
@@ -1572,7 +1573,7 @@
     "type": "anime",
     "synopsis": "Aang and his friends Katara and Sokka journey to the North Pole to find a Waterbending master to teach Aang and Katara. The Fire Nation is waging a seemingly endless war against the Earth Kingdom and the Water Tribes. Aang, the current Avatar, must master the four elements (Air, Water, Earth, and Fire) to end the war.",
     "titles": {
-      "en_us": "Avatar: The Last Airbender Book 1: Water"
+      "en": "Avatar: The Last Airbender Book 1: Water"
     },
     "rating": "83.31",
     "status": "finished",
