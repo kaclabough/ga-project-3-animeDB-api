@@ -12,31 +12,10 @@ const Anime = new Schema({
   rating: Number,
   status: String,
   images: {
-    tiny: String,
     small: String,
     medium: String,
     large: String,
-    original: String,
-    meta: {
-      dimensions: {
-        tiny: {
-          width: Number,
-          height: Number
-        },
-        small: {
-          width: Number,
-          height: Number
-        },
-        medium: {
-          width: Number,
-          height: Number
-        },
-        large: {
-          width: Number,
-          height: Number
-        }
-      }
-    }
+    original: String
   },
   episodeCount: Number
 });
