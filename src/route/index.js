@@ -3,6 +3,6 @@ const router = express.Router();
 
 router.use("/", require("./app"));
 router.use("/api/anime", require("./anime"));
-router.use("/api/user", require("./users"));
+router.use("/api/users", require("./users"));
 
 module.exports = router;
