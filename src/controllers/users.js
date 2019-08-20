@@ -4,6 +4,11 @@ const passport = require("../../config/passport");
 const jwt = require("jwt-simple");
 
 module.exports = {
+  index: (req, res) => {
+    User.find({}).then(user => {
+      res.json(user);
+    });
+  },
   signUp: (req, res) => {
     if (req.body.email && req.body.password) {
       let newUser = {
