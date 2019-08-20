@@ -67,5 +67,8 @@ module.exports = {
 
   delete: (req, res) => {
     User.findByIdAndDelete(req.params.id).then(deleted => res.send(deleted));
+  },
+  deleteAll: (req, res) => {
+    User.remove({});
   }
 };
