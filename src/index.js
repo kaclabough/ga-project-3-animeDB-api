@@ -1,13 +1,16 @@
 const express = require("express");
 const parser = require("body-parser");
+const passport = require("../config/passport")();
+const cors = require("cors");
+const userController = require("./controllers/users");
 const app = express();
 
-const cors = require("cors");
-
 app.use(parser.json());
+app.use(passport.initialize());
 app.use(cors());
 
 app.use("/", require("./route/index"));
+app.use("/users", userController);
 
 app.set("port", process.env.PORT || 3001);
 
