@@ -11,15 +11,23 @@ module.exports = {
       res.json(anime);
     });
   },
-  update: (req, res) => {
-    Anime.findAndUpdate({ title: { en: req.params.title } }, req.body).then(
+  updateTitle: (req, res) => {
+    Anime.findOneAndUpdate({ title: { en: req.params.title } }, req.body).then(
       anime => {
         res.json(anime);
       }
     );
   },
+  updateId: (req, res) => {
+    let temp = new Anime();
+    console.log(temp);
+    Anime.findOneAndUpdate({ _id: req.params.id }, req.body).then(anime => {
+      res.json(anime);
+    });
+  },
   create: (req, res) => {
     Anime.create(req.body).then(anime => {
+      console.log(req.body);
       res.json(anime);
     });
   }
