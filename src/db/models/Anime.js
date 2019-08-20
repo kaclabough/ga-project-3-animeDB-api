@@ -3,10 +3,11 @@ const mongoose = require("../../connection");
 const Schema = mongoose.Schema;
 
 const Anime = new Schema({
-  title: {
+  titles: {
     en: String,
     en_jp: String
   },
+  type: String,
   synopsis: String,
   rating: Number,
   status: String,
