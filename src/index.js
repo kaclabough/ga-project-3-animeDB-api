@@ -10,7 +10,6 @@ app.use(passport.initialize());
 app.use(cors());
 
 app.use("/", require("./route/index"));
-app.use("/users", userController);
 
 app.set("port", process.env.PORT || 3001);
 

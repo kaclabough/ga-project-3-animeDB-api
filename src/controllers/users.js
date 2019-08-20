@@ -1,28 +1,47 @@
-const express = require("express");
-const jwt = require("jwt-simple");
-const passport = require("../../config/passport");
+const User = require("../db/models/User.js");
 const config = require("../../config/config");
-const mongoose = require("../db/models/User");
-const User = mongoose.model("User");
-const router = express.Router();
+const passport = require("../../config/passport");
+const jwt = require("jwt-simple");
 
-router.delete("/:id", (req, res) => {
-  User.findByIdAndDelete(req.params.id).then(deleted => res.send(deleted));
-});
+module.exports = {
+  signUp: (req, res) => {
+    if (req.body.email && req.body.password) {
+      let newUser = {
+        userName: req.body.userName,
+        email: req.body.email,
+        password: req.body.password
+      };
+      User.findOne({ email: req.body.email }).then(user => {
+        if (!user) {
+          User.create(newUser).then(user => {
+            if (user) {
+              var payload = {
+                id: newUser.id
+              };
+              var token = jwt.encode(payload, config.jwtSecret);
+              res.json({
+                token: token
+              });
+            } else {
+              res.sendStatus(401);
+            }
+          });
+        } else {
+          res.sendStatus(401);
+        }
+      });
+    } else {
+      res.sendStatus(401);
+    }
+  },
 
-router.post("/signup", (req, res) => {
-  if (req.body.email && req.body.password) {
-    let newUser = {
-      userName: req.body.userName,
-      email: req.body.email,
-      password: req.body.password
-    };
-    User.findOne({ email: req.body.email }).then(user => {
-      if (!user) {
-        User.create(newUser).then(user => {
-          if (user) {
+  login: (req, res) => {
+    if (req.body.email && req.body.password) {
+      User.findOne({ email: req.body.email }).then(user => {
+        if (user) {
+          if (user.password === req.body.password) {
             var payload = {
-              id: newUser.id
+              id: user.id
             };
             var token = jwt.encode(payload, config.jwtSecret);
             res.json({
@@ -31,38 +50,22 @@ router.post("/signup", (req, res) => {
           } else {
             res.sendStatus(401);
           }
-        });
-      } else {
-        res.sendStatus(401);
-      }
-    });
-  } else {
-    res.sendStatus(401);
-  }
-});
-
-router.post("/login", (req, res) => {
-  if (req.body.email && req.body.password) {
-    User.findOne({ email: req.body.email }).then(user => {
-      if (user) {
-        if (user.password === req.body.password) {
-          var payload = {
-            id: user.id
-          };
-          var token = jwt.encode(payload, config.jwtSecret);
-          res.json({
-            token: token
-          });
         } else {
           res.sendStatus(401);
         }
-      } else {
-        res.sendStatus(401);
-      }
-    });
-  } else {
-    res.sendStatus(401);
-  }
-});
+      });
+    } else {
+      res.sendStatus(401);
+    }
+  },
 
-module.exports = router;
+  update: (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body).then(user => {
+      res.json(user);
+    });
+  },
+
+  delete: (req, res) => {
+    User.findByIdAndDelete(req.params.id).then(deleted => res.send(deleted));
+  }
+};
