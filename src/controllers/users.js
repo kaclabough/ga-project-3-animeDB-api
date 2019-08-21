@@ -9,6 +9,9 @@ module.exports = {
       res.json(user);
     });
   },
+  getbyref: (req, res) => {
+    User.findOne({ email: req.params.email }).then(user => res.json(user));
+  },
 
   getbyacc: (req, res) => {
     User.findOne({ email: req.params.email })
