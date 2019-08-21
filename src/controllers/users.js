@@ -9,12 +9,20 @@ module.exports = {
       res.json(user);
     });
   },
+
+  getbyid: (req, res) => {
+    User.findOne({ _id: req.params.id })
+      .populate("favorites")
+      .then(user => res.json(user));
+  },
+
   signUp: (req, res) => {
     if (req.body.email && req.body.password) {
       let newUser = {
         userName: req.body.userName,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        favorites: req.body.favorites
       };
       User.findOne({ email: req.body.email }).then(user => {
         if (!user) {
