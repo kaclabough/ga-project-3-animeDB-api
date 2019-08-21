@@ -10,8 +10,8 @@ module.exports = {
     });
   },
 
-  getbyid: (req, res) => {
-    User.findOne({ _id: req.params.id })
+  getbyacc: (req, res) => {
+    User.findOne({ email: req.params.email })
       .populate("favorites")
       .then(user => res.json(user));
   },
