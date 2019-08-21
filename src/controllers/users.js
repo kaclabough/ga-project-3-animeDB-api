@@ -73,7 +73,7 @@ module.exports = {
   },
 
   update: (req, res) => {
-    User.findOneAndUpdate({ _id: req.params.id }, req.body).then(user => {
+    User.findOneAndUpdate({ email: req.params.email }, req.body).then(user => {
       res.json(user);
     });
   },
